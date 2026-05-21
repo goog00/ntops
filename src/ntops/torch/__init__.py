@@ -11,6 +11,7 @@ from ntops.torch.conv2d import conv2d
 from ntops.torch.cos import cos
 from ntops.torch.div import div
 from ntops.torch.dropout import dropout
+from ntops.torch.feature_alpha_dropout import feature_alpha_dropout
 from ntops.torch.eq import eq
 from ntops.torch.exp import exp
 from ntops.torch.ge import ge
@@ -54,6 +55,7 @@ __all__ = [
     "cos",
     "div",
     "dropout",
+    "feature_alpha_dropout",
     "eq",
     "exp",
     "ge",
