@@ -27,6 +27,17 @@ def generate_arguments(use_float=True):
     return "shape, dtype, device, rtol, atol", arguments
 
 
+def generate_int_arguments(min_ndim=1):
+    dtype_arr = (torch.int32, torch.int64)
+    arguments = []
+
+    for ndim in range(min_ndim, 5):
+        for dtype in dtype_arr:
+            arguments.append((_random_shape(ndim), dtype, "cuda"))
+
+    return "shape, dtype, device", arguments
+
+
 def gauss(mu=0.0, sigma=1.0):
     return random.gauss(mu, sigma)
 
